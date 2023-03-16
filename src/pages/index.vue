@@ -15,20 +15,12 @@ function renderIcon(icon: Component) {
 const menuOptions: MenuOption[] = [
   {
     label: '主页',
-    key: 'home',
+    key: '/',
     icon: renderIcon(BookIcon)
   },
   {
-    label: '1973年的弹珠玩具',
-    key: 'pinball-1973',
-    icon: renderIcon(BookIcon),
-    disabled: true,
-    children: [
-      {
-        label: '鼠',
-        key: 'rat'
-      }
-    ]
+    label: 'Notion API',
+    key: 'notion'
   },
   {
     label: '寻羊冒险记',

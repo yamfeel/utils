@@ -4,13 +4,13 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 const routes = [
     {
         path: '/',
-        name: 'home',
+        name: 'Home',
         component: () => import('../pages/regular/Subtitle.vue')
     },
     {
-        path: '/home',
-        name: 'home',
-        component: () => import('../pages/regular/Subtitle.vue')
+        path: '/notion',
+        name: 'Notion API',
+        component: () => import('../pages/notion/index.vue')
     },
 ]
 
