@@ -10,7 +10,7 @@ const routes = [
     {
         path: '/notion',
         name: 'Notion API',
-        component: () => import('../pages/notion/index.vue')
+        component: () => import('../pages/notion/Index.vue')
     },
 ]
 
