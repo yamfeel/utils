@@ -4,8 +4,8 @@ import { NSpace, NInput } from 'naive-ui'
 import { getNotionData, NotionApiConfig } from '../../api/notionApi'
 
 const notionVersion = ref('2022-06-28')
-const apiKey = ref('')
-const databaseId = ref('')
+const apiKey = ref(import.meta.env.VITE_NOTION_API_KEY)
+const databaseId = ref(import.meta.env.VITE_NOTION_DATABASE_ID)
 
 const propertyName = ref('')
 const propertyValue = ref('')
@@ -13,7 +13,7 @@ const propertyValue = ref('')
 const res = ref('')
 
 const getData = async () => {
-    const query = {
+    const query = {/* 
         property: propertyName.value,
         value: {
             title: [
@@ -23,19 +23,19 @@ const getData = async () => {
                     },
                 },
             ],
-        },
+        }, */
     };
 
     const config: NotionApiConfig = {
         apiKey: apiKey.value,
         databaseId: databaseId.value,
         notionVersion: notionVersion.value,
-        query,
+        // query,
     };
 
     const data = await getNotionData(config);
     console.log(data)
-    res.value = data
+    res.value = JSON.stringify(data)
 };
 
 </script>

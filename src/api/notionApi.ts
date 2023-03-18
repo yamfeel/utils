@@ -21,7 +21,9 @@ export interface NotionApiConfig {
 
 export async function getNotionData(config: NotionApiConfig) {
     const response = await api.post(
-        `https://api.notion.com/v1/databases/${config.databaseId}/query`,
+        // `https://api.notion.com/v1/databases/${config.databaseId}/query`,
+        /* 在设置中配置跨域 */
+        `v1/databases/${config.databaseId}/query`,
         {
             query: config.query,
         },
