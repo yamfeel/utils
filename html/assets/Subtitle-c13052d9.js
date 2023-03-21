@@ -1,1 +1,0 @@
-import{_ as e}from"./_plugin-vue_export-helper-c27b6911.js";import{o as t,c}from"./index-0b9b913e.js";const o={};function r(n,s){return t(),c("div",null,"subtitle")}const l=e(o,[["render",r]]);export{l as default};
